@@ -9,3 +9,8 @@ Este é um jogo de memória interativo que ajuda a aprender mais sobre a Alemanh
 3. Quando você encontrar um par, as cartas permanecem viradas para cima.
 4. O jogo termina quando todos os pares forem encontrados.
 
+## Como Rodar o Projeto
+
+1. Acesse o link a baixo:
+https://mago805.github.io/ca-a-palavras/
+
