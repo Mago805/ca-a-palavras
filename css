@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #333;
+}
+
+.memory-game {
+    display: grid;
+    grid-template-columns: repeat(5, 100px); /* Ajustado para 5 colunas */
+    grid-gap: 10px;
+    justify-content: center;
+}
+
+.card {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+}
+
+.card .card-face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* A parte da frente das cartas, com fundo de imagem */
+.card .front {
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLtOzSMmNFpab-Pl8-OpOIy5k2Cfd5jtCogQHfxeJ0FJcKWrHoSFVr1dg8rkUGOYFOEU8&usqp=CAU'); /* Imagem de fundo */
+    background-size: cover; /* Faz a imagem cobrir a área da frente */
+    background-position: center; /* Centraliza a imagem */
+    color: #fff;  /* Cor do texto */
+    font-size: 24px;  /* Tamanho do texto */
+    font-weight: bold;  /* Deixa o texto em negrito */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* A parte de trás das cartas, com a imagem da carta */
+.card .back {
+    background-size: cover;
+    background-position: center;
+    transform: rotateY(180deg);
+}
+
+.card.flipped {
+    transform: rotateY(180deg);
+}
+
+.memory-game .card.matched {
+    background-color: #ddd;
+    cursor: default;
+}
